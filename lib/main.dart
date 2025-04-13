@@ -1,34 +1,26 @@
-import 'package:flutter/material.dart';
+import 'dart:async';
 
-void main() {
-  runApp(const MyApp());
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:stackwelth/src/home_src.dart';
+
+
+void main(){
+  runZonedGuarded(() {
+    runApp(const SlackNews());
+  }, (e, s) {},);
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class SlackNews extends StatelessWidget {
+  const SlackNews({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: const Home(),
+    return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.red),
+      home: HomePage(),
     );
   }
 }
 
-class Home extends StatefulWidget {
-  const Home({super.key});
-
-  @override
-  State<Home> createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return const Placeholder();
-  }
-}
