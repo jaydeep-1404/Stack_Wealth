@@ -2,9 +2,9 @@ name: 🎯 Flutter CI Build (main only)
 
 on:
   push:
-    branches: [ main ]
+    branches: [ stage ]
   pull_request:
-    branches: [ main ]
+    branches: [ stage ]
 
 jobs:
   build:
