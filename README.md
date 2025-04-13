@@ -32,4 +32,4 @@ for create build in macos run this commands :
 
 ![Image alt](https://github.com/jaydeep-1404/Stack_Wealth/blob/837d5a21e0d0efa74ab5828c6662a933c43236e1/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20Max%20-%202025-04-13%20at%2021.13.28.png)
 
-
+![Image alt](https://github.com/jaydeep-1404/Stack_Wealth/blob/17ac60973c45156cd86e30976778875f2d172505/Simulator%20Screenshot%20-%20iPhone%2016%20Pro%20Max%20-%202025-04-13%20at%2021.13.36.png)
