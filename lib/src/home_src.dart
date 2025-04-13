@@ -2,13 +2,40 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:stackwelth/data/Api/get_news.dart';
+import '../core/lifecycle.dart';
 import 'detail_src.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({super.key});
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  final ctrl = Get.put(NewsController());
+  late AppLifecycleHandler _lc;
+
+  @override
+  void initState() {
+    super.initState();
+    _lc = AppLifecycleHandler(
+      onResumed: () {},
+      onPaused: () {},
+      onDetached: () {},
+      onInactiveForMinute: () {},
+      onInactive: () {},
+    );
+  }
+
+  @override
+  void dispose() {
+    _lc.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
-    final ctrl = Get.put(NewsController());
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.red,
@@ -152,5 +179,4 @@ class HomePage extends StatelessWidget {
       ),
     ),
   );
-
 }
